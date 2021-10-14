@@ -1,0 +1,53 @@
+1) Посмотреть где я - pwd	
+2) Создать папку - mkdir folder name 
+3) Зайти в папку - cd folder name 
+4) Создать 3 папки mkdir folder name1 folder name2 folder name3 
+5) Зайти в любоую папку - cd folder name name 1
+6) Создать 5 файлов (3 txt, 2 json) - touch 1.txt 2.txt 3.txt 4.json 5.json
+7) Создать 3 папки - mkdir folder name 1.1 folder name1.2 folder name1.3
+8) Вывести список содержимого папки - ls -la
+9)  + Открыть любой txt файлvim - vim 1.txt
+10) + написать туда что-нибудь, любой текст - vim 1.txt / push insert  write text  push ESC / :wq for save 
+11) + сохранить и выйти. -  push ESC / :wq for save 
+12) Выйти из папки на уровень выше - cd ..
+—
+13) переместить любые 2 файла, которые вы создали, в любую другую папку.-  mv from .. what .. and where(mv ./f1.1/{1.txt,2.txt} ./f1.1/f2.1
+)
+14) скопировать любые 2 файла, которые вы создали, в любую другую папку. - cp from .. what .. and where (cp ./f1.1/f2.1/{1.txt,2.txt} ./f1.1)
+15) Найти файл по имени- find what u search and where   (find ./ -name 4.json)
+16) просмотреть содержимое в реальном времени (команда grep) изучите как она работает.- tail -f what kind word we search and where ($ grep -w "privet" 1.txt)
+17) вывести несколько первых строк из текстового файла - head -number of ... where   ($ head -3 1.txt)
+18) вывести несколько последних строк из текстового файла - tail -number of .. and where  ($ tail -3 1.txt)
+19) просмотреть содержимое длинного файла (команда less) изучите как она работает.- less name file  ($ less 1.txt) 
+20) вывести дату и время)-$ date (Fri Oct  1 22:50:27 EDT 2021)
+
+1*) adaml@LAPTOP-97DEV1P0 MINGW64 /d/QA/HW/#1HW/git/f1/f1.1
+$ curl 'http://162.55.220.72:5005/get_method?name=A.Ametov&age=36'
+["A.Ametov","36"]
+
+2*) 
+3) Зайти в папку
+4) Создать 3 папки
+5) Зайти в любоую папку
+6) Создать 5 файлов (3 txt, 2 json)
+7) Создать 3 папки
+8. Вывести список содержимого папки
+13) переместить любые 2 файла, которые вы создали, в любую другую папку.
+
+sozdayom script  komandoy 
+chmod+x p1.sh  p1 nazvanie scripta
+
+otkrivaetsya okno tam pishem script sohranyaem  i zapuskaem 
+./p1.sh
+
+
+#!/bin/bash
+cd ./Folder_script
+mkdir f1 f2 f3 
+cd ./f1
+touch 1.txt 2.txt 3.txt 4.json 5.json 
+mkdir f2.1 f2.2 f2.3 
+ls -la 
+mv 1.txt 2.txt ./f2.1
+echo done
+
