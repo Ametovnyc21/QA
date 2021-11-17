@@ -1,0 +1,34 @@
+=====================================================================================
+
+# 3 H / W Ametov A.
+ 4. Create file “new.json” - touch new.json
+ 5. Add a file for the git. - git add new.json
+ 6. Commit the file. - git add commit new.json
+ 7. Upload the file to the external GitHub repository. - git push
+ 8. Create files new2.json, new2.xml, new2.txt - touch new2.json new2.xml new2.txt
+ 9. Add files for git. - Git add.
+ 10. Commit files. Git commit “new files” - git -m "new files"
+ 11. Upload files to external GitHub repository. - Git push
+ 12. Edit the content of the file “new2.txt” - write information about yourself (name, age, number of pets, future desired salary). - vim new2.txt
+ 13. Edit the content of the file “new2.json” - write information about yourself (name, age, number of pets, future desired salary). Write everything in JSON format. - {"Full_Name": "Adam Ametov", "DOB": 04/30/1985, "Count of Pets": 0, "Salary": 130.000}
+ 14. Add and commit “new2.2txt” in one line. - git add new2.2.txt && git commit -m "add and commit independly"
+ 15. Add and commit “ne2.2.json” in one line. - git add ne2.2.json && git commit -m "add and commit independly"
+
+ 16. Submit changes to an external repository. - git push
+ 17. Edit the content of the file “new2.xml” - write information about yourself (name, age, number of pets, future desired salary). Write everything in XML format. -Vim new2.xml
+
+<? xml version = "1.0" encoding = "utf-8"?>
+<root>
+<Name = "Adam_Ametov">
+<DOB> 04/30/1985 </DOB>
+<Pets> 04/30/1985 </Pets>
+<Salary> 130.000 </Salary>
+</root>
+ 29. Commit changes to the web interface. Commit changes
+ 30. Synchronize external and local repositories git pull
+
+
+
+
+Note git add new2.txt; git commit -am "new2.txt is added and commited"
+
