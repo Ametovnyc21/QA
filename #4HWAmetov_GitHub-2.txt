@@ -1,0 +1,390 @@
+﻿Home work for GitHub)
+1. On the local repository, make branches for: - git checkout -b name of branches
+- Postman
+- Jmeter
+- CheckLists
+- Bag Reports
+- SQL
+- Charles
+- Mobile testing
+
+2. Push all branches to an external repository - git push -u origin Postman - git push origin --all
+3. In the Bag Reports branch, make a text document with the structure of a bug report -
+touch 1BugReport.txt
+vim 1BugReport.txt
+  git add.
+  git commit -m "add 1BugReport.txt"
+4. Push the structure of the bug report to the external repository - git push -u origin BagReports
+5. Commit the Bag Reports branch to Main
+  git checkout main
+  git merge BagReports
+6. Push main to an external repository - git push -u origin main
+7. In the CheckLists branch, sketch out the structure of the checklist
+  git checkout CheckLists
+  vim 1checklist.txt
+  git add.
+  git commit -m "add 1checklist.txt"
+8. Push the structure to an external repository - git push -u origin Checklists
+9. On the external repository, make a Pull Request of the CheckLists branch in main
+10.Synchronize External and Local branches Main git push -u origin main (main po umolchaniu sinhronizirovana)
+
+======================================================================================================================
+
+
+Adam@LAPTOP-AC324LUK MINGW64 /d/QA
+$ git clone https://github.com/Ametovnyc21/QA.git
+Cloning into 'QA'...
+remote: Enumerating objects: 3, done.
+remote: Counting objects: 100% (3/3), done.
+remote: Total 3 (delta 0), reused 0 (delta 0), pack-reused 0
+Receiving objects: 100% (3/3), done.
+
+Adam@LAPTOP-AC324LUK MINGW64 /d/QA
+$ ls -la
+total 4
+drwxr-xr-x 1 Adam 197121 0 Oct 13 19:31 ./
+drwxr-xr-x 1 Adam 197121 0 Oct 13 19:27 ../
+drwxr-xr-x 1 Adam 197121 0 Oct 13 19:31 QA/
+
+Adam@LAPTOP-AC324LUK MINGW64 /d/QA
+$ cd qa
+
+Adam@LAPTOP-AC324LUK MINGW64 /d/QA/qa (main)
+$ git status
+starting fsmonitor-daemon in 'D:/QA/QA'
+On branch main
+Your branch is up to date with 'origin/main'.
+
+nothing to commit, working tree clean
+
+Adam@LAPTOP-AC324LUK MINGW64 /d/QA/qa (main)
+$ touch 1.txt
+
+Adam@LAPTOP-AC324LUK MINGW64 /d/QA/qa (main)
+$ git status
+On branch main
+Your branch is up to date with 'origin/main'.
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        1.txt
+
+nothing added to commit but untracked files present (use "git add" to track)
+
+Adam@LAPTOP-AC324LUK MINGW64 /d/QA/qa (main)
+$ git add 1.txt
+
+Adam@LAPTOP-AC324LUK MINGW64 /d/QA/qa (main)
+$ git status
+On branch main
+Your branch is up to date with 'origin/main'.
+
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+        new file:   1.txt
+
+
+Adam@LAPTOP-AC324LUK MINGW64 /d/QA/qa (main)
+$ touch 2.txt
+
+Adam@LAPTOP-AC324LUK MINGW64 /d/QA/qa (main)
+$ git status
+On branch main
+Your branch is up to date with 'origin/main'.
+
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+        new file:   1.txt
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        2.txt
+
+
+Adam@LAPTOP-AC324LUK MINGW64 /d/QA/qa (main)
+$ git add .
+
+Adam@LAPTOP-AC324LUK MINGW64 /d/QA/qa (main)
+$ git status
+On branch main
+Your branch is up to date with 'origin/main'.
+
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+        new file:   1.txt
+        new file:   2.txt
+
+
+Adam@LAPTOP-AC324LUK MINGW64 /d/QA/qa (main)
+$ git commit -m "the first 2 commited files"
+Author identity unknown
+
+*** Please tell me who you are.
+
+Run
+
+  git config --global user.email "you@example.com"
+  git config --global user.name "Your Name"
+
+to set your account's default identity.
+Omit --global to set the identity only in this repository.
+
+fatal: unable to auto-detect email address (got 'Adam@LAPTOP-AC324LUK.(none)')
+
+Adam@LAPTOP-AC324LUK MINGW64 /d/QA/qa (main)
+$ git config --global user.name "A.Ametov"
+
+Adam@LAPTOP-AC324LUK MINGW64 /d/QA/qa (main)
+$ git config --global user.email "n)"
+
+Adam@LAPTOP-AC324LUK MINGW64 /d/QA/qa (main)
+$ $ git config --global user.email "ametovnyc21@gmail.com"
+bash: $: command not found
+
+Adam@LAPTOP-AC324LUK MINGW64 /d/QA/qa (main)
+$ git config --global user.email "ametovnyc21@gmail.com"
+
+Adam@LAPTOP-AC324LUK MINGW64 /d/QA/qa (main)
+$ git config --global user.email
+ametovnyc21@gmail.com
+
+Adam@LAPTOP-AC324LUK MINGW64 /d/QA/qa (main)
+$ git commit -m "the first commited files"
+[main bc52f59] the first commited files
+ 2 files changed, 0 insertions(+), 0 deletions(-)
+ create mode 100644 1.txt
+ create mode 100644 2.txt
+
+Adam@LAPTOP-AC324LUK MINGW64 /d/QA/qa (main)
+$ git push
+info: please complete authentication in your browser...
+Enumerating objects: 4, done.
+Counting objects: 100% (4/4), done.
+Delta compression using up to 4 threads
+Compressing objects: 100% (2/2), done.
+Writing objects: 100% (3/3), 282 bytes | 282.00 KiB/s, done.
+Total 3 (delta 0), reused 0 (delta 0), pack-reused 0
+To https://github.com/Ametovnyc21/QA.git
+   a6b2125..bc52f59  main -> main
+
+Adam@LAPTOP-AC324LUK MINGW64 /d/QA/qa (main)
+$ git branch
+* main
+
+Adam@LAPTOP-AC324LUK MINGW64 /d/QA/qa (main)
+$ git checkout -b Postman
+Switched to a new branch 'Postman'
+
+Adam@LAPTOP-AC324LUK MINGW64 /d/QA/qa (Postman)
+$ git checkout -b Jmeter
+Switched to a new branch 'Jmeter'
+
+Adam@LAPTOP-AC324LUK MINGW64 /d/QA/qa (Jmeter)
+$ git checkout -b Checklists
+Switched to a new branch 'Checklists'
+
+Adam@LAPTOP-AC324LUK MINGW64 /d/QA/qa (Checklists)
+$ git checkout -b BagReports
+Switched to a new branch 'BagReports'
+
+Adam@LAPTOP-AC324LUK MINGW64 /d/QA/qa (BagReports)
+$ git checkout -b SQL
+Switched to a new branch 'SQL'
+
+Adam@LAPTOP-AC324LUK MINGW64 /d/QA/qa (SQL)
+$ git checkout -b Charles
+Switched to a new branch 'Charles'
+
+Adam@LAPTOP-AC324LUK MINGW64 /d/QA/qa (Charles)
+$ git checkout -b MobileTesting
+Switched to a new branch 'MobileTesting'
+
+Adam@LAPTOP-AC324LUK MINGW64 /d/QA/qa (MobileTesting)
+$ git branch
+  BagReports
+  Charles
+  Checklists
+  Jmeter
+* MobileTesting
+  Postman
+  SQL
+  main
+
+Adam@LAPTOP-AC324LUK MINGW64 /d/QA/qa (MobileTesting)
+$ git checkout main
+Switched to branch 'main'
+Your branch is up to date with 'origin/main'.
+
+Adam@LAPTOP-AC324LUK MINGW64 /d/QA/qa (main)
+$ git push origin --all
+Total 0 (delta 0), reused 0 (delta 0), pack-reused 0
+To https://github.com/Ametovnyc21/QA.git
+ * [new branch]      BagReports -> BagReports
+ * [new branch]      Charles -> Charles
+ * [new branch]      Checklists -> Checklists
+ * [new branch]      Jmeter -> Jmeter
+ * [new branch]      MobileTesting -> MobileTesting
+ * [new branch]      Postman -> Postman
+ * [new branch]      SQL -> SQL
+
+Adam@LAPTOP-AC324LUK MINGW64 /d/QA/qa (main)
+$ git chekout BagReports
+git: 'chekout' is not a git command. See 'git --help'.
+
+The most similar command is
+        checkout
+
+Adam@LAPTOP-AC324LUK MINGW64 /d/QA/qa (main)
+$ git checkout  BagReports
+Switched to branch 'BagReports'
+
+Adam@LAPTOP-AC324LUK MINGW64 /d/QA/qa (BagReports)
+$ vim 1BagReport.txt
+
+Adam@LAPTOP-AC324LUK MINGW64 /d/QA/qa (BagReports)
+$ git status
+On branch BagReports
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        1BagReport.txt
+
+nothing added to commit but untracked files present (use "git add" to track)
+
+Adam@LAPTOP-AC324LUK MINGW64 /d/QA/qa (BagReports)
+$ git add .
+warning: LF will be replaced by CRLF in 1BagReport.txt.
+The file will have its original line endings in your working directory
+
+Adam@LAPTOP-AC324LUK MINGW64 /d/QA/qa (BagReports)
+$ git commit -m "1BagReport"
+[BagReports c3f810a] 1BagReport
+ 1 file changed, 19 insertions(+)
+ create mode 100644 1BagReport.txt
+
+Adam@LAPTOP-AC324LUK MINGW64 /d/QA/qa (BagReports)
+$ git push -u origin BagReports
+Enumerating objects: 4, done.
+Counting objects: 100% (4/4), done.
+Delta compression using up to 4 threads
+Compressing objects: 100% (3/3), done.
+Writing objects: 100% (3/3), 410 bytes | 410.00 KiB/s, done.
+Total 3 (delta 0), reused 0 (delta 0), pack-reused 0
+To https://github.com/Ametovnyc21/QA.git
+   bc52f59..c3f810a  BagReports -> BagReports
+Branch 'BagReports' set up to track remote branch 'BagReports' from 'origin'.
+
+Adam@LAPTOP-AC324LUK MINGW64 /d/QA/qa (BagReports)
+$ git checkout main
+Switched to branch 'main'
+Your branch is up to date with 'origin/main'.
+
+Adam@LAPTOP-AC324LUK MINGW64 /d/QA/qa (main)
+$ git merge BagReports
+Updating bc52f59..c3f810a
+Fast-forward
+ 1BagReport.txt | 19 +++++++++++++++++++
+ 1 file changed, 19 insertions(+)
+ create mode 100644 1BagReport.txt
+
+Adam@LAPTOP-AC324LUK MINGW64 /d/QA/qa (main)
+$ git commited -m "Merged Bag Reports branch in Main branch"
+git: 'commited' is not a git command. See 'git --help'.
+
+The most similar command is
+        commit-tree
+
+Adam@LAPTOP-AC324LUK MINGW64 /d/QA/qa (main)
+$ git push
+Total 0 (delta 0), reused 0 (delta 0), pack-reused 0
+To https://github.com/Ametovnyc21/QA.git
+   bc52f59..c3f810a  main -> main
+
+Adam@LAPTOP-AC324LUK MINGW64 /d/QA/qa (main)
+$ git push -u origin main
+Everything up-to-date
+Branch 'main' set up to track remote branch 'main' from 'origin'.
+
+Adam@LAPTOP-AC324LUK MINGW64 /d/QA/qa (main)
+$ git status
+On branch main
+Your branch is up to date with 'origin/main'.
+
+nothing to commit, working tree clean
+
+Adam@LAPTOP-AC324LUK MINGW64 /d/QA/qa (main)
+$ git checkout Checklists
+Switched to branch 'Checklists'
+
+Adam@LAPTOP-AC324LUK MINGW64 /d/QA/qa (Checklists)
+$ vim 1checklist.txt
+
+Adam@LAPTOP-AC324LUK MINGW64 /d/QA/qa (Checklists)
+$ git status
+On branch Checklists
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        1checklist.txt
+
+nothing added to commit but untracked files present (use "git add" to track)
+
+Adam@LAPTOP-AC324LUK MINGW64 /d/QA/qa (Checklists)
+$ git add .
+warning: LF will be replaced by CRLF in 1checklist.txt.
+The file will have its original line endings in your working directory
+
+Adam@LAPTOP-AC324LUK MINGW64 /d/QA/qa (Checklists)
+$ git status
+On branch Checklists
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+        new file:   1checklist.txt
+
+
+Adam@LAPTOP-AC324LUK MINGW64 /d/QA/qa (Checklists)
+$ git commit -m "commited 1checklist,txt"
+[Checklists 8f3be47] commited 1checklist,txt
+ 1 file changed, 16 insertions(+)
+ create mode 100644 1checklist.txt
+
+Adam@LAPTOP-AC324LUK MINGW64 /d/QA/qa (Checklists)
+$ git status
+On branch Checklists
+nothing to commit, working tree clean
+
+Adam@LAPTOP-AC324LUK MINGW64 /d/QA/qa (Checklists)
+$ git push
+fatal: The current branch Checklists has no upstream branch.
+To push the current branch and set the remote as upstream, use
+
+    git push --set-upstream origin Checklists
+
+
+Adam@LAPTOP-AC324LUK MINGW64 /d/QA/qa (Checklists)
+$ git push -u origin Checklists
+Enumerating objects: 4, done.
+Counting objects: 100% (4/4), done.
+Delta compression using up to 4 threads
+Compressing objects: 100% (3/3), done.
+Writing objects: 100% (3/3), 398 bytes | 398.00 KiB/s, done.
+Total 3 (delta 0), reused 0 (delta 0), pack-reused 0
+To https://github.com/Ametovnyc21/QA.git
+   bc52f59..8f3be47  Checklists -> Checklists
+Branch 'Checklists' set up to track remote branch 'Checklists' from 'origin'.
+
+Adam@LAPTOP-AC324LUK MINGW64 /d/QA/qa (Checklists)
+$ git push -u origin main
+Everything up-to-date
+Branch 'main' set up to track remote branch 'main' from 'origin'.
+
+Adam@LAPTOP-AC324LUK MINGW64 /d/QA/qa (Checklists)
+$ git status
+On branch Checklists
+Your branch is up to date with 'origin/Checklists'.
+
+nothing to commit, working tree clean
+
+Adam@LAPTOP-AC324LUK MINGW64 /d/QA/qa (Checklists)
+
+
+
+
