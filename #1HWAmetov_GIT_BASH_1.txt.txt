@@ -1,0 +1,165 @@
+1) See where I am - pwd
+2) Create folder - mkdir folder name
+3) Go to the folder - cd folder name
+4) Create 3 folders mkdir folder name1 folder name2 folder name3
+5) Go to any folder - cd folder name name 1
+6) Create 5 files (3 txt, 2 json) - touch 1.txt 2.txt 3.txt 4.json 5.json
+7) Create 3 folders - mkdir folder name 1.1 folder name1.2 folder name1.3
+8) List the contents of the folder - ls -la
+9) + Open any txt file vim - vim 1.txt
+10) + write something there, any text - vim 1.txt / push insert write text push ESC /: wq for save
+11) + save and exit. - push ESC /: wq for save
+12) Exit the folder to a higher level - cd ..
+3) move any 2 files you created to any other folder - mv from .. what .. and where (mv ./f1.1/ {1.txt,2.txt} ./f1.1/f2 .1
+)
+14) copy any 2 files you created to any other folder. - cp from .. what .. and where (cp ./f1.1/f2.1/ {1.txt,2.txt} ./f1.1)
+15) Find file by name - find what u search and where (find ./ -name 4.json)
+16) view live content (grep command) learn how it works - grep -w what kind word we search and where ($ grep -w "privet" 1.txt)
+17) print the first few lines from the text file - head -number of ... where ($ head -3 1.txt)
+18) print the last few lines from a text file - tail -number of .. and where ($ tail -3 1.txt)
+19) view the contents of a long file (less command) learn how it works - less name file ($ less 1.txt)
+20) display date and time) - $ date (Fri Oct 1 22:50:27 EDT 2021)
+
+1 *) adaml @ LAPTOP-97DEV1P0 MINGW64 /d/QA/HW/#1HW/git/f1/f1.1
+$ curl 'http://162.55.220.72:5005/get_method?name=A.Ametov&age=36'
+["A.Ametov", "36"]
+2 *)
+3) Go to the folder
+4) Create 3 folders
+5) Go to any folder
+6) Create 5 files (3 txt, 2 json)
+7) Create 3 folders
+8. List the contents of the folder
+13) move any 2 files you created to any other folder.
+
+create script 
+chmod + x p1.sh p1 nazvanie scripta
+
+open windows and wrinte in  script
+./p1.sh
+
+#!/bin/bash
+cd ./Folder_script
+mkdir f1 f2 f3 
+cd ./f1
+touch 1.txt 2.txt 3.txt 4.json 5.json 
+mkdir f2.1 f2.2 f2.3 
+ls -la 
+mv 1.txt 2.txt ./f2.1
+echo done
+===================================================================
+
+my code from terminal 
+
+===================================================================
+
+adaml@LAPTOP-97DEV1P0 MINGW64 /d/QA/HW/#1HW/Git
+$
+
+adaml@LAPTOP-97DEV1P0 MINGW64 /d/QA/HW/#1HW/Git
+$ pwd
+/d/QA/HW/#1HW/Git
+
+adaml@LAPTOP-97DEV1P0 MINGW64 /d/QA/HW/#1HW/Git
+$ mkdir f1
+
+adaml@LAPTOP-97DEV1P0 MINGW64 /d/QA/HW/#1HW/Git
+$ cd f1
+
+adaml@LAPTOP-97DEV1P0 MINGW64 /d/QA/HW/#1HW/Git/f1
+$ mkdir f1.1 f1.2 f1.3
+
+adaml@LAPTOP-97DEV1P0 MINGW64 /d/QA/HW/#1HW/Git/f1
+$ cd f1.1
+
+adaml@LAPTOP-97DEV1P0 MINGW64 /d/QA/HW/#1HW/Git/f1/f1.1
+$ touch 1.txt 2.txt 3.txt 4.json 5.json
+
+adaml@LAPTOP-97DEV1P0 MINGW64 /d/QA/HW/#1HW/Git/f1/f1.1
+$ mkdir f2.1 f2.2 f2.3
+
+adaml@LAPTOP-97DEV1P0 MINGW64 /d/QA/HW/#1HW/Git/f1/f1.1
+$ ls -la
+total 4
+drwxr-xr-x 1 adaml 197609 0 Oct  1 21:48 ./
+drwxr-xr-x 1 adaml 197609 0 Oct  1 21:47 ../
+-rw-r--r-- 1 adaml 197609 0 Oct  1 21:48 1.txt
+-rw-r--r-- 1 adaml 197609 0 Oct  1 21:48 2.txt
+-rw-r--r-- 1 adaml 197609 0 Oct  1 21:48 3.txt
+-rw-r--r-- 1 adaml 197609 0 Oct  1 21:48 4.json
+-rw-r--r-- 1 adaml 197609 0 Oct  1 21:48 5.json
+drwxr-xr-x 1 adaml 197609 0 Oct  1 21:48 f2.1/
+drwxr-xr-x 1 adaml 197609 0 Oct  1 21:48 f2.2/
+drwxr-xr-x 1 adaml 197609 0 Oct  1 21:48 f2.3/
+adaml @ LAPTOP-97DEV1P0 MINGW64 /d/QA/HW/#1HW/Git/f1/f1.1
+$ vim 1.txt
+
+adaml @ LAPTOP-97DEV1P0 MINGW64 /d/QA/HW/#1HW/Git/f1/f1.1
+cd ..
+
+adaml @ LAPTOP-97DEV1P0 MINGW64 / d / QA / HW / # 1HW / Git / f1
+C
+
+adaml @ LAPTOP-97DEV1P0 MINGW64 / d / QA / HW / # 1HW / Git / f1
+3
+
+adaml @ LAPTOP-97DEV1P0 MINGW64 / d / QA / HW / # 1HW / Git / f1
+$ mv ./f1.1/{1.txt,2.txt} ./f1.1/f2.1
+adaml @ LAPTOP-97DEV1P0 MINGW64 / d / QA / HW / # 1HW / Git / f1
+$ cp ./f1.1/f2.1/{1.txt,2.txt} ./f1.1
+adaml @ LAPTOP-97DEV1P0 MINGW64 / d / QA / HW / # 1HW / Git / f1
+$ find ./ -name 4.json
+./f1.1/4.json
+adaml @ LAPTOP-97DEV1P0 MINGW64 /d/QA/HW/#1HW/git/f1/f1.1
+$ grep -w "privet" 1.txt
+1 privet
+
+adaml @ LAPTOP-97DEV1P0 MINGW64 /d/QA/HW/#1HW/git/f1/f1.1
+$ head -3 1.txt
+1 privet
+2 kak dela
+3 horosho
+adaml @ LAPTOP-97DEV1P0 MINGW64 /d/QA/HW/#1HW/git/f1/f1.1
+$ tail -3 1.txt
+6 da ti prav
+7 poka uvidimsya pozje
+8 poka
+adaml @ LAPTOP-97DEV1P0 MINGW64 /d/QA/HW/#1HW/git/f1/f1.1
+less 1.txt
+adaml @ LAPTOP-97DEV1P0 MINGW64 /d/QA/HW/#1HW/git/f1/f1.1
+$ date
+Fri Oct 1 22:50:27 EDT 2021
+
+adaml @ LAPTOP-97DEV1P0 MINGW64 /d/QA/HW/#1HW/git/f1/f1.1
+$ curl 'http://162.55.220.72:5005/get_method?name=A.Ametov&age=36'
+["A.Ametov", "36"]
+
+
+================================================== =====
+My script
+================================================== =====
+
+3) Go to the folder
+4) Create 3 folders
+5) Go to any folder
+6) Create 5 files (3 txt, 2 json)
+7) Create 3 folders
+8. List the contents of the folder
+13) move any 2 files you created to any other folder.
+
+sozdayom script komandoy
+chmod + x p1.sh p1 nazvanie scripta
+
+otkrivaetsya okno tam pishem script sohranyaem i zapuskaem
+./p1.sh
+
+
+#! / bin / bash
+cd ./Folder_script
+mkdir f1 f2 f3
+cd ./f1
+touch 1.txt 2.txt 3.txt 4.json 5.json
+mkdir f2.1 f2.2 f2.3
+ls -la
+mv 1.txt 2.txt ./f2.1
+echo done
